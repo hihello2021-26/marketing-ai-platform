@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Marketing Platform</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🚀 AI-Powered Marketing & Sales Intelligent Platform</h1>
+
+<div class="box">
+<h2>Customer Prediction</h2>
+
+<form action="/predict" method="post">
+<input type="number" name="age" placeholder="Age" required>
+<input type="number" name="income" placeholder="Income" required>
+<input type="number" name="visits" placeholder="Website Visits" required>
+<button type="submit">Predict</button>
+</form>
+
+<h3>{{ prediction }}</h3>
+</div>
+
+<div class="box">
+<h2>Marketing Campaign Generator</h2>
+
+<form action="/campaign" method="post">
+<input type="text" name="product" placeholder="Product Name" required>
+<input type="text" name="audience" placeholder="Target Audience" required>
+<button type="submit">Generate</button>
+</form>
+
+<pre>{{ campaign }}</pre>
+</div>
+
+<div class="box">
+<h2>Upload Customer CSV</h2>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+<input type="file" name="file" required>
+<button type="submit">Upload</button>
+</form>
+
+<h3>{{ uploadmsg }}</h3>
+</div>
+
+</body>
+</html>
